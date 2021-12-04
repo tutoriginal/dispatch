@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
+from dispatch.Placement import Placement
+from dispatch.clusters import get_hosts, get_hosts
+from dispatch.api import get_subscribed
 import os
 from dotenv import load_dotenv
 
 load_dotenv(".env")
 
-from dispatch.api import get_subscribed
-from dispatch.clusters import get_hosts, get_hosts
-from dispatch.Placement import Placement
 
 pisciners, err = get_subscribed("c-piscine-final-exam")
 if err is not None:
